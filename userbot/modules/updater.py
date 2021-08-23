@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari ⚡Geez-Project⚡.`'
+                ' untuk dapat deploy perubahan terbaru dari 🚨 Memew Project 🚨.`'
             )
             repo.__del__()
             return
@@ -67,7 +67,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nSedang MengUpdate ⚡Geez-ProjectBot⚡, Mohon Menunggu 5-7 Menit`'
+                         '\nSedang Update 🚨Memew Userbot 🚨, Mohon Menunggu 5-7 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -115,9 +115,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**⚡Geez-Project⚡** `Berhasil Di Update!`')
+    await event.edit('**🚨Memew-Project🚨** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**⚡Geez-Project⚡** `Di Restart....`')
+    await event.edit('**🚨Memew-Project** `Di Restart....`')
     await asyncio.sleep(1)
     await event.edit('`Mohon Menunggu Beberapa Detik.`')
     await asyncio.sleep(10)
@@ -126,7 +126,7 @@ async def update(event, repo, ups_rem, ac_br):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#BOT \n"
-            "**⚡Geez-Project⚡ Telah Di Perbarui.**")
+            "**🚨Memew-Project🚨 Telah Di Perbarui.**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n⚡Geez-Project⚡ Sudah Versi Terbaru\n')
+            f'\n🚨Memew-Project🚨 Sudah Versi Terbaru\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**Pembaruan Untuk ⚡Geez-Project⚡ :\n\n💻 Pembaruan Data :**\n`{changelog}`'
+        changelog_str = f'**Pembaruan Untuk 🚨Memew-Project⚡ :\n\n💻 Pembaruan Data :**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
