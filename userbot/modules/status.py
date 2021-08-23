@@ -17,7 +17,7 @@ from userbot import TEMP_DOWNLOAD_DIRECTORY
 OFFLINE_TAG = f"{ALIVE_NAME} #OFFLINE"
 ONLINE_TAG = f"{ALIVE_NAME} #ONLINE"
 PROFILE_IMAGE = os.environ.get(
-    "PROFILE_IMAGE", "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg"
+    "PROFILE_IMAGE", "https://telegra.ph/file/0ea744ec2c405c18d93de.jpg"
 )
 
 
@@ -35,7 +35,7 @@ async def _(event):
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     urllib.request.urlretrieve(
-        "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg", "donottouch.jpg"
+        "https://telegra.ph/file/0ea744ec2c405c18d93de.jpg", "donottouch.jpg"
     )
     photo = "donottouch.jpg"
     if photo:
@@ -58,7 +58,7 @@ async def _(event):
                 last_name=last_name, first_name=first_name
             )
         )
-        result = "**`{} {}`\nI am Offline now.**".format(first_name, last_name)
+        result = "**`{} {}`\nGua Lagi Off Kontol.**".format(first_name, last_name)
         await event.edit(result)
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
@@ -73,7 +73,7 @@ async def _(event):
     if user.first_name.startswith(OFFLINE_TAG):
         await event.edit("**Changing Profile to Online...**")
     else:
-        await event.edit("**Already Online.**")
+        await event.edit("**Oke Kita Online Lagi.**")
         return
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
@@ -99,7 +99,7 @@ async def _(event):
                 last_name=last_name, first_name=first_name
             )
         )
-        result = "**`{} {}`\nI am Online !**".format(first_name, last_name)
+        result = "**`{} {}`\nSaya Balik Lagi Epribadehh !**".format(first_name, last_name)
         await event.edit(result)
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
