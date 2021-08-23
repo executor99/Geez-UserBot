@@ -16,9 +16,9 @@ async def lastname(steal):
     user_id = message.sender.id
     id = f"/search_id {user_id}"
     if message.sender.bot:
-        await steal.edit("```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
+        await steal.edit("```Balas Ke Pesan Si HODE.```")
         return
-    await steal.edit("```Mengambil Informasi Pengguna Tersebut, Mohon Menunggu..```")
+    await steal.edit("```HAYO LO ANJING KETAHUAN NAMA ASLI NYA..```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -52,7 +52,7 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await steal.edit("`Saya Sedang Sakit Mohon Maaf`")
+        return await steal.edit("`Saya Sedang Coli`")
 
 
 CMD_HELP.update({
